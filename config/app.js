@@ -15,7 +15,7 @@ module.exports = {
   | other location.
   |
   */
-
+ ENV_SILENT: true,
   name: Env.get('APP_NAME', 'AdonisJs'),
 
   /*

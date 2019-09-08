@@ -1,5 +1,5 @@
-'use strict'
-
+"use strict";
+const Env = use("Env");
 /*
 |--------------------------------------------------------------------------
 | Routes
@@ -14,8 +14,11 @@
 */
 
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
-const Route = use('Route')
+const Route = use("Route");
 
-Route.get('/', () => {
-  return { greeting: 'Hello world in JSON' }
-})
+Route.get("/", () => {
+  const name = Env.get("DB_HOST", "AdonisJs");
+  //APPSETTING_DB_HOST
+
+  return { greeting: `Hello world in JSON${name}` };
+});
