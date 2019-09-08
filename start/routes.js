@@ -17,7 +17,7 @@ const Env = use("Env");
 const Route = use("Route");
 
 Route.get("/", () => {
-  const name = Env.get("DB_HOST", "AdonisJs");
+  const name = "Diego"; //Env.get("DB_HOST", "AdonisJs");
   //APPSETTING_DB_HOST
 
   return { greeting: `Hello world in JSON${name}` };
